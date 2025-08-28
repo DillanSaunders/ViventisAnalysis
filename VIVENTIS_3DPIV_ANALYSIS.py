@@ -1,3 +1,4 @@
+'version: 1.0.0'
 from magicgui import magicgui
 from pathlib import Path
 import logging
@@ -172,6 +173,7 @@ viewer.window.add_dock_widget(pseudotrack_widget,name ="Create Psuedotracks from
 viewer.dims.axis_labels = ['Time','Z','Y','X']
 
 napari.run()
+
 
 
 
