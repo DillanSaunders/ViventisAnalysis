@@ -1,3 +1,4 @@
+'version: 1.0.0'
 from multiprocessing import freeze_support
 
 from magicgui import magicgui
@@ -178,5 +179,6 @@ if __name__ == '__main__':
     viewer.window.add_dock_widget(tiff2BDVConversion,name="Convert Lightsheet Experiment")
 
     viewer.window.add_dock_widget(retrievingSTORedData,name="Retrieve STORed File")
+
 
     napari.run()
