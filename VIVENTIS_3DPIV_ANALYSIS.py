@@ -42,7 +42,7 @@ def run_piv(Input_Path = Path("Choose Folder to Analyse with PIV"),key: str="Set
         is_hdf5 = "true"
     else:
         is_hdf5 = 'false'
-
+    print("quickPIV will begin shortly...")
     subprocess.run(["julia","--threads=100","--project=C:\\Users\\Public\\data_processing_scripts\\batch_quickpiv",
                     "C:\\Users\\Public\\data_processing_scripts\\batch_quickpiv\\commandline_julia.jl",Input_Path,key,is_hdf5,hdf5_target_channel,
                     PIV_WindowSize,PIV_SearchMargin,Voxel_Dimensions],shell=True)
@@ -173,6 +173,7 @@ viewer.window.add_dock_widget(pseudotrack_widget,name ="Create Psuedotracks from
 viewer.dims.axis_labels = ['Time','Z','Y','X']
 
 napari.run()
+
 
 
 
