@@ -1,3 +1,4 @@
+'version: 1.0.0'
 # import napari
 import numpy as np
 import pandas as pd
@@ -258,3 +259,4 @@ track.register_manual_tracks()
 # print(track.pseudo_tracks.loc[:,['x','y','z']])
 align = track.evaluate_tracks(tstep=5,nn_radius=20)
 track.save_data(['registered_tracks','track_alignment','selected_pseudotracks'])
+
