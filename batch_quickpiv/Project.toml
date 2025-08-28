@@ -1,0 +1,21 @@
+name = "batch_quickpiv"
+uuid = "2ddcd9ad-e82d-4030-8a93-54397d03ef6e"
+authors = ["Dillan Saunders <dillansaunders@gmail.com> "]
+version = "0.1.0"
+
+[deps]
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+HDF5 = "f67ccb44-e63f-5c2f-98bd-6dc0ccc4ba2f"
+LIBTIFF = "70b51d67-c487-4396-b38c-3fc6acfb5994"
+quickPIV = "a7ef0d03-9b98-4a48-9d47-a853b7b40ca8"
+
+[sources]
+quickPIV = {url = "https://github.com/Marc-3d/quickPIV.git"}
+LIBTIFF = {url = "https://github.com/Marc-3d/LIBTIFF.jl.git"}
+
+[compat]
+julia = "1.10"
+DelimitedFiles = "1.9.1"
+HDF5 = "0.17.2"
+LIBTIFF = "0.1.0"
+quickPIV = "0.1.0"

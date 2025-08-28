@@ -1,0 +1,4 @@
+ LIBTIFF v0.1.0 `https://github.com/Marc-3d/LIBTIFF.jl.git#master`
+ quickPIV v0.1.0 `https://github.com/Marc-3d/quickPIV.git#main`
+ HDF5 v0.17.2
+ DelimitedFiles v1.9.1
