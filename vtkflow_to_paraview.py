@@ -1,3 +1,4 @@
+'version: 1.0.0'
 from vtk import vtkStructuredGridReader
 from vtk.util import numpy_support as VN
 from pathlib import Path
