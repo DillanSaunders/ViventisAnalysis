@@ -1,4 +1,4 @@
-
+'version: 1.0.0'
 import numpy as np
 from vtk import vtkStructuredGridReader,vtkStructuredGridWriter,vtkStructuredGrid,vtkPoints
 from vtk.util import numpy_support as VN
@@ -612,5 +612,6 @@ def norm_dotprod(vector1, vector2):
     
     
 #     return np.stack(total_vector_grid,axis=0),piv_dims,chunks,tend 
+
 
 
