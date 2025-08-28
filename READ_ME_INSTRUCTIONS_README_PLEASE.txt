@@ -122,6 +122,15 @@ Python (3D PIV):
 
 open anaconda prompt on your desktop
 
+if this is your first time running the PIV analysis on this computer then you first need to make sure the local Julia environment is created. Enter the following commands into the prompt:
+	> julia
+	> ] 
+	> activate C:\Users\Public\data_processing_scripts\batch_quickpiv 
+	> instantiate
+	> backspace key
+	> exit()
+This only needs to be done once. Further detail can be found in the Viventis Analysis Computer Set up Document.
+
 Paste the following commands into the prompt and hit enter 
 
 	conda activate piv3d_env
@@ -163,6 +172,7 @@ You need to select the file you want to convert back to the active HDF5. This sh
 
 
 DO NOT DOWNLOAD ANY OTHER PROGRAMES OR UPDATES WITHOUT ASKING BEN FIRST.
+
 
 
 
