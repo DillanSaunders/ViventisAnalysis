@@ -479,7 +479,7 @@ def experiment2bdv(input_directory:Path,input_key:str,output_directory:Path,tsta
 
 
 
-experiment2bdv(Path('Z:\\Room224_SharedFolder\\Alice\\pescoid\\20250304_165246_expzacy0044_fused'),"*Fused*",Path('Z:\\Room224_SharedFolder\\Alice\\pescoid\\20250304_165246_expzacy0044_fused'),0,-1,'ddzs2',bit_depth="int8",stor_location=Path("Z:\\Room224_SharedFolder\\Alice\\pescoid\\20250304_165246_expzacy0044_fused"))
+#experiment2bdv(Path('Z:\\Room224_SharedFolder\\Alice\\pescoid\\20250304_165246_expzacy0044_fused'),"*Fused*",Path('Z:\\Room224_SharedFolder\\Alice\\pescoid\\20250304_165246_expzacy0044_fused'),0,-1,'ddzs2',bit_depth="int8",stor_location=Path("Z:\\Room224_SharedFolder\\Alice\\pescoid\\20250304_165246_expzacy0044_fused"))
 # experiment2bdv(Path("D:\\Users\\Dillan\\for_mounting_measure\\20231124_105016_Experiment"),"*561*",Path("D:\\Users\\Dillan\\for_mounting_measure\\20231124_105016_Experiment"),0,1,'help')
 # output_path =Path("G:\\Imen\\RA\\Exp13-RA-h5")
 # input_path = Path("G:\\Imen\\RA\\20240927_141009_Exp13-SBNhybrid-RA_position2_fused")
@@ -670,6 +670,7 @@ experiment2bdv(Path('Z:\\Room224_SharedFolder\\Alice\\pescoid\\20250304_165246_e
 #     print("Done")
 
 #     return 
+
 
 
 
