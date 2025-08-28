@@ -1,3 +1,4 @@
+'version: 1.0.0'
 import tifffile as tiff
 import xml.etree.ElementTree as ET
 import time
@@ -670,6 +671,7 @@ def experiment2bdv(input_directory:Path,input_key:str,output_directory:Path,tsta
 #     print("Done")
 
 #     return 
+
 
 
 
