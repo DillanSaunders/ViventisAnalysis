@@ -82,7 +82,7 @@ class CroppingData(Container):
         yx_max_final, zy_max_final,pixel_meta = tiff_conversion.project_time_series(self._filedialog.value,self._inputkey.value,self._timestep.value,self._channel.value)
         #yx_max_final = tiff.imread(Path("D:\\Users\\Dillan\\for_mounting_measure\\20231124_105814_Experiment\\yx_max_final.tif"))
         print('Finished Projecting Data')
-        print(zy_max_final.shape)
+        
         self.scale_fac = float(pixel_meta['PhysicalSizeZ'])/float(pixel_meta['PhysicalSizeY'])
         
         default_square = np.array([[ 0,  0],
@@ -182,3 +182,4 @@ if __name__ == '__main__':
 
 
     napari.run()
+
