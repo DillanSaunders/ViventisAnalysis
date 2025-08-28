@@ -41,7 +41,7 @@ def tiff2BDVConversion(ExperimentPath=Path("Choose Experiment folder"),Input_Key
     if Time_End == -1:
         Time_End = None 
 
-    tiff_conversion.experiment2bdv(ExperimentPath,Input_Key,ExperimentPath,Time_Start,Time_End,CRSID,'int16',compression_level = 2,stor_location=Path("Y:\\Room225_SharedFolder\\ViventisLS2_data"),pyramid_levels = ((1, 4, 4),(2, 8, 8),(4, 16, 16)),chunk_dims=((4, 250, 250),(4, 250, 250), (4, 250, 250), (4, 250, 250)))
+    tiff_conversion.experiment2bdv(ExperimentPath,Input_Key,ExperimentPath,Time_Start,Time_End,CRSID,bit_depth='int16',compression_level = 2,stor_location=Path("Y:\\Room225_SharedFolder\\ViventisLS2_data"),pyramid_levels = ((1, 4, 4),(2, 8, 8),(4, 16, 16)),chunk_dims=((4, 250, 250),(4, 250, 250), (4, 250, 250), (4, 250, 250)))
 
     return
 
@@ -182,6 +182,7 @@ if __name__ == '__main__':
 
 
     napari.run()
+
 
 
 
