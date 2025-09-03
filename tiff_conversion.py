@@ -242,7 +242,7 @@ class settings_xml:
 
 ### this version of tiff conversion makes the server stored copy first and then the working copy second
 
-def tiff2bdv(input_path:Path,input_key:str,output_path:Path,tstart:int,tend:int,crsid:str,compression_level = 2,stor_location = Path("\\\\gen-nas-pc-002\\Room-225\\Room225_SharedFolder\\ViventisLS2_data"),bit_depth = 'int16',pyramid_levels = ((1, 4, 4),    (2, 8, 8),    (4, 16, 16)),chunk_dims =((4, 250, 250),(4, 250, 250), (4, 250, 250), (4, 250, 250)), overwrite=False): #axes,chunk_dims, ,
+def tiff2bdv(input_path:Path,input_key:str,output_path:Path,tstart:int,tend:int,crsid:str,compression_level = 2,stor_location = Path("Y:\\Room225_SharedFolder\\ViventisLS2_data"),bit_depth = 'int16',pyramid_levels = ((1, 4, 4),    (2, 8, 8),    (4, 16, 16)),chunk_dims =((4, 250, 250),(4, 250, 250), (4, 250, 250), (4, 250, 250)), overwrite=False): #axes,chunk_dims, ,
     # TODO: save compression type and level into metadata
     start_time = time.time()
     new_filename = ("_").join(str(input_path.parent.name).split('_')[:3] + "".join(input_path.name.split(" ")).split('_')[:2]) #updated to remove spaces from viventis folder names
@@ -255,7 +255,7 @@ def tiff2bdv(input_path:Path,input_key:str,output_path:Path,tstart:int,tend:int,
     
     logger.info(f"Script Start {start_time}")
 
-    output_stor = stor_location.joinpath(*output_path.parts[2:])  #\\\\gen-nas-pc-001.gen.private.cam.ac.uk\\lightsheet-nas\\
+    output_stor = stor_location.joinpath(*output_path.parts[2:]) 
     output_stor.parent.mkdir(parents=True, exist_ok=True)
     logger.debug(f"Created file tree on server at {output_stor.parent}")
     
@@ -365,7 +365,7 @@ def tiff2bdv(input_path:Path,input_key:str,output_path:Path,tstart:int,tend:int,
     
     return
 
-def storage2bdv(input_path:Path,bit_depth='int16',stor_location=Path("\\\\gen-nas-pc-002\\Room-225\\Room225_SharedFolder\\ViventisLS2_data"),pyramid_levels = ((1, 4, 4),    (2, 8, 8),    (4, 16, 16)),chunk_dims =((4, 250, 250),(4, 250, 250), (4, 250, 250), (4, 250, 250))):
+def storage2bdv(input_path:Path,bit_depth='int16',stor_location=Path("Y:\\Room225_SharedFolder\\ViventisLS2_data"),pyramid_levels = ((1, 4, 4),    (2, 8, 8),    (4, 16, 16)),chunk_dims =((4, 250, 250),(4, 250, 250), (4, 250, 250), (4, 250, 250))):
     start_time = time.time()
     print("Beginning conversion of the Active data")
     input_path_stor = stor_location.joinpath(*input_path.parts[2:])
@@ -437,7 +437,7 @@ def storage2bdv(input_path:Path,bit_depth='int16',stor_location=Path("\\\\gen-na
     
     return
 
-def experiment2bdv(input_directory:Path,input_key:str,output_directory:Path,tstart:int,tend:int,crsid:str,compression_level = 2,bit_depth = 'int16',stor_location = Path("\\\\gen-nas-pc-002\\Room-225\\Room225_SharedFolder\\ViventisLS2_data"),pyramid_levels = ((1, 4, 4),    (2, 8, 8),    (4, 16, 16)),chunk_dims =((4, 250, 250),(4, 250, 250), (4, 250, 250), (4, 250, 250)), overwrite=False):
+def experiment2bdv(input_directory:Path,input_key:str,output_directory:Path,tstart:int,tend:int,crsid:str,compression_level = 2,bit_depth = 'int16',stor_location = Path("Y:\\Room225_SharedFolder\\ViventisLS2_data"),pyramid_levels = ((1, 4, 4),    (2, 8, 8),    (4, 16, 16)),chunk_dims =((4, 250, 250),(4, 250, 250), (4, 250, 250), (4, 250, 250)), overwrite=False):
     # Guillermo notes for future users
     print('IMPORTANT: THE input_directory IS THE MAIN FOLDER EXPERIMENT CONTAINING THE MAXIMUM PROJECTION FOLDER AND THE SETTINGS FOLDER!')
     print('IMPORTANT: Your converted files will appear in this same folder when the conversion in completed')
@@ -671,6 +671,7 @@ def experiment2bdv(input_directory:Path,input_key:str,output_directory:Path,tsta
 #     print("Done")
 
 #     return 
+
 
 
 
